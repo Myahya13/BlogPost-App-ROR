@@ -1,5 +1,5 @@
-<%= link_to "Edit" , edit_blog_post_path(@blog_post)  if user_signed_in?%>
+
 <h1><%= @blog_post.title %></h1>
 <%=  @blog_post.body %>
-
-<%=  button_to "Delete", @blog_post, method: :delete %>
+<%= button_to "Edit", edit_blog_post_path(@blog_post)  if user_signed_in?%>
+<%=  button_to "Delete", @blog_post, method: :delete, class: "bg-green-200  px-4 py-2 rounded hover:bg-gray-300" %>
